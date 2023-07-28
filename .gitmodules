@@ -1,0 +1,6 @@
+[submodule "who-said-innopolis-bot"]
+	path = who-said-innopolis-bot
+	url = https://github.com/ali-salloum6/who-said-innopolis-bot.git
+[submodule "who-said-innopolis-server"]
+	path = who-said-innopolis-server
+	url = https://github.com/ali-salloum6/who-said-innopolis-server.git

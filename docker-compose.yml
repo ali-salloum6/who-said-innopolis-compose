@@ -1,0 +1,17 @@
+version: '3'
+services:
+  bot:
+    image: salloum/who-said-innopolis-bot
+    build:
+      context: ./who-said-innopolis-bot
+    env_file: .env.bot
+    restart: always
+
+  server:
+    image: salloum/who-said-innopolis-server
+    build:
+      context: ./who-said-innopolis-server
+    env_file: .env.server
+    ports:
+      - 5000:5000
+    restart: always
