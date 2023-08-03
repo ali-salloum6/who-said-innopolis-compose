@@ -6,6 +6,8 @@ services:
       context: ./who-said-innopolis-bot
     env_file: .env.bot
     restart: always
+    depends_on:
+      - mongodb
 
   server:
     image: salloum/who-said-innopolis-server
@@ -15,3 +17,14 @@ services:
     ports:
       - 5000:5000
     restart: always
+  mongodb:
+    image: mongo:latest
+    logging:
+      options:
+        max-size: 1g
+    volumes:
+      - mongodb_data:/data/db
+    restart: always
+
+volumes:
+  mongodb_data:
